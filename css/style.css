@@ -4300,16 +4300,6 @@ ul.list-v >li>a.active {
     display: block;
   }
 }
-.cover-wrapper .l_header {
-  transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transform: translateY(-128px);
-}
-.cover-wrapper .l_header.show {
-  transform: translateY(0);
-}
 @media screen and (min-width: 2048px) {
   .l_header {
     max-width: 65vw;
