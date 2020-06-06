@@ -403,55 +403,55 @@
         <div class="article-entry" itemprop="articleBody">
           
           <h3 id="一-git下载及安装"><a href="#一-git下载及安装" class="headerlink" title="一.git下载及安装"></a>一.git下载及安装</h3><p>下载地址<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p>
-<img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/1591332535(1).png" width="500px">
+<img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/1.PNG" width="500px">
 
 <h3 id="git命令行使用"><a href="#git命令行使用" class="headerlink" title=".git命令行使用"></a>.git命令行使用</h3><a id="more"></a>
 
 <p>git分布式版本控制软件是通过</p>
 <p>工作区—本地服务器—远程仓库的提交方式</p>
 <p>git仓库有<strong>ssh</strong>和<strong>https</strong>两种方式克隆到本地，其中通过https方式的话传输过程中经常需要验证身份，操作不方便，所以 文章采用ssh配置公钥私钥的方式。</p>
-<h4 id="配置公钥私钥"><a href="#配置公钥私钥" class="headerlink" title="配置公钥私钥"></a>配置公钥私钥</h4><p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/2.png" alt></p>
+<h4 id="配置公钥私钥"><a href="#配置公钥私钥" class="headerlink" title="配置公钥私钥"></a>配置公钥私钥</h4><p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/2.PNG" alt></p>
 <p><code>git config --list</code>查看所有配置项</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/3.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/3.PNG" alt></p>
 <p>创建私钥<code>sssh-keygen -t rsa -C(磁盘名)</code></p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/4.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/4.PNG" alt></p>
 <p>找到生成私钥的文件价，发现产生了两个私钥信息文件</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/5.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/5.PNG" alt></p>
 <p>查看内容并复制到github-setting-SSH and GPC key 中去</p>
 <p><code>cat ~/.ssh/id_rsa.pub</code>查看文件内容</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/6.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/6." alt></p>
 <p>点击Add SSH key ，公钥配置成功。</p>
 <p>接下来实现远程建立git项目，从github仓库下克隆一个项目到本地</p>
 <p><code>git clone xxx.git</code> 克隆仓库和本地同步。</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/7.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/7.PNG" alt></p>
 <p>由于我这个项目是一个新项目，所以只有一个readme.md文件</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/8.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/8.PNG" alt></p>
 <p>切换到到本地仓库的目录并执行<code>git status</code>命令查看仓库状态。（当前状态表示仓库没有在进行任何操作）</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/9.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/9.PNG" alt></p>
 <p>当你在本地仓库中新建一个文件,再执行<code>git status</code>发现状态现在增加了一个新的文件，需要<code>git add&lt;file&gt;</code>命令提交</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/10.png" alt>)<img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/11.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/10.PNG" alt>)<img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/11.PNG" alt></p>
 <p>输入<code>git add ceshi.html</code>或者<code>git add .</code>（表示提交所以改动的文件）将文件提交到暂存区</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/12.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/12.PNG" alt></p>
 <p>在查看状态时新增的文件从红色变为绿色，表示文件已经再暂存区，需要commit命令提交到本地服务区<code>git commit -m &quot;需要添加的注释&quot;</code>。（如果文件只能内容上的更改，并没有建立新文件，可以使用<code>commit -a -m &quot;需要添加的注释“</code>直接从工作区提交到本地服务器）</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/13.png" alt></p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/14.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/13.PNG" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/14.PNG" alt></p>
 <p>最后一步，输入<code>git push origin master</code>提交到远程服务器(origin:远程服务器名称，master：远程仓库上的主分支)</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/15.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/15.PNG" alt></p>
 <p>再到github上查看仓库时发现仓库内容已经经过的更新，其中commits变为两次(commits:项目提交次数)。</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/16.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/16.PNG" alt></p>
 <p>git还有一个使用的功能，叫做git分支，它可以从主线上分离出来做另外的操作而又不影响主线(多用于解决项目的临时序求)</p>
 <p><code>git branch 分支名称</code>新建分支</p>
 <p><code>git checkout 分支名称</code>切换分支(只有切换分支以后，对仓库内容的改动才会在新分支上进行，不然一直是在主分支master上进行)</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/17.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/17.PNG" alt></p>
 <p>接下来在新分支上新建了一个新文件,并向往常命令一样将文件<strong>上传到暂存区—提交到本地服务器—上传到远程仓库</strong></p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/18.png" alt></p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/19.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/18.PNG" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/19.PNG" alt></p>
 <p>接下来查看github上项目仓库，发现新分支上的文件比主分支上多一个ch1_cehshi.html文件</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/20.png" alt></p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/22.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/20.PNG" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/22.PNG" alt></p>
 <p>项目没有问题，只要将分支合并一个项目就完成了。</p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/21.png" alt></p>
-<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/23.png" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/21.PNG" alt></p>
+<p><img src="/2020/06/05/git%E5%B7%A5%E5%85%B7%E5%92%8Cgithub%E7%9A%84%E4%BD%BF%E7%94%A8/23.PNG" alt></p>
 
           
             <div class='article_footer'>
@@ -539,7 +539,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-06T16:36:39+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-06T17:09:56+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jun 6, 2020</p>
